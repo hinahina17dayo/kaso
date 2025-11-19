@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【闇公式】株式会社 LINEおぷ過疎対策事業室 | 予測不能な地域創生</title>
+    <meta name="description" content="LINEオープンチャットの過疎化・過密化を自在に操る、予測不能な地域コミュニティ戦略を提供します。問い合わせは、送ろうとしても送れません。">
+    
+    <style>
+        /* デザイン：ヘッダーは緑色に戻す */
+        body { font-family: 'Hiragino Sans', 'Meiryo', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #f5fafd; } /* 背景色も落ち着いた青系に戻す */
+        header { background-color: #00b900; /* LINEのイメージカラー */ color: white; padding: 25px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        header h1 { margin: 0; font-size: 2rem; text-align: center; }
+        nav ul { list-style: none; padding: 0; margin: 20px 0 0; display: flex; justify-content: center; }
+        nav ul li a { display: block; padding: 10px 20px; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
+        nav ul li a:hover { background-color: #009900; }
+        
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        section { padding: 60px 0; border-bottom: 1px dashed #cccccc; }
+        section h2 { text-align: center; color: #007a00; margin-bottom: 40px; font-size: 2rem; } /* H2の色も緑系に */
+        
+        /* キャッチコピーエリア */
+        .hero { 
+            background: #e0f2f1; 
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .hero h2 { color: #004d40; margin-bottom: 20px; font-size: 2.8rem; line-height: 1.3; }
+        .hero p { font-size: 1.5rem; color: #555; }
+
+        /* お問い合わせフォーム */
+        .contact-form-area { background-color: white; padding: 40px; border: 3px solid #00b900; border-radius: 10px; }
+        .contact-form-area input[type="text"], 
+        .contact-form-area input[type="email"], 
+        .contact-form-area textarea {
+            width: 100%; 
+            padding: 12px; 
+            margin-top: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn-send {
+            background-color: #00b900; 
+            color: white; 
+            padding: 15px 30px; 
+            border: none;
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 1.1rem;
+            cursor: pointer; /* カーソルをポインターにして「押せる」ように見せる */
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .btn-send:hover { background-color: #009900; }
+        
+        footer { text-align: center; padding: 25px; background-color: #333; color: white; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>株式会社 LINEおぷ過疎対策事業室</h1>
+            <p class="tagline">戦略的過疎化・過密化で地域コミュニティを操る</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">企業情報</a></li>
+                    <li><a href="#service">禁断のソリューション</a></li>
+                    <li><a href="#cases">破壊と創造の実績</a></li>
+                    <li><a href="#contact">絶望的なお問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="hero">
+            <h2>LINEオプを過疎化、過密化させたいそこのあなた！</h2>
+            <p>予測不能なコミュニティ変動こそ、真の地域活性化の鍵です。</p>
+            <p>**私たちは、あなたの街の「安定」を揺るがします。**</p>
+        </div>
+        
+        <section id="contact">
+            <h2>🚨 お問い合わせ - 送信の可否は運命次第</h2>
+            
+            <div class="contact-form-area">
+                <p style="color: #007a00; font-size: 1.1rem; font-weight: bold;">【挑戦】以下のフォームに、当社の定める秘匿条件に合致する情報を入力してください。</p>
+
+                <form id="chaos-form" onsubmit="handleSubmission(event)"> 
+                    
+                    <p>
+                        <label for="company_name">企業名/自治体名:</label><br>
+                        <input type="text" id="company_name" name="company_name" required placeholder="例：漢字、ひらがな、カタカナで入力">
+                    </p>
+                    
+                    <p>
+                        <label for="contact_email">連絡先メールアドレス:</label><br>
+                        <input type="email" id="contact_email" name="contact_email" required placeholder="例：test@example.com">
+                    </p>
+                    
+                    <p>
+                        <label for="inquiry_detail">ご相談内容:</label><br>
+                        <textarea id="inquiry_detail" name="inquiry_detail" required placeholder="ご要望を具体的に..."></textarea>
+                    </p>
+
+                    <button type="submit" class="btn-send">送信を試みる</button>
+                </form>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>株式会社 LINEおぷ過疎対策事業室 | [非公開の所在地]</p>
+        <p>Copyright &copy; 2025 All Rights Reserved. (But not really.)</p>
+    </footer>
+
+    <script>
+        function handleSubmission(event) {
+            // フォームの標準の送信動作をキャンセル
+            event.preventDefault(); 
+            
+            // フォームの入力値を取得
+            const companyName = document.getElementById('company_name').value;
+            const contactEmail = document.getElementById('contact_email').value;
+            const inquiryDetail = document.getElementById('inquiry_detail').value;
+
+            let errorMessage = "🚨 送信できませんでした。\n\n";
+            let canSend = true;
+
+            // 1. 企業名/自治体名のチェック：a~z, 0~9が含まれていたらエラー
+            const illegalNameChars = /[a-z0-9]/i;
+            if (illegalNameChars.test(companyName)) {
+                errorMessage += "・企業名/自治体名に『a~z, 0~9』が使われています。これらは当社の機密保護プロトコルにより無効です。\n";
+                canSend = false;
+            } else if (companyName.length === 0) {
+                 errorMessage += "・企業名/自治体名が未入力です。\n";
+                 canSend = false;
+            }
+            
+            // 2. メールアドレスのチェック：特定ドメイン（例：gmail.com）が含まれていたらエラー
+            const illegalDomain = /@gmail\.com/i;
+            if (illegalDomain.test(contactEmail)) {
+                errorMessage += "・メールアドレスが『@gmail.com』ドメインと一致しました。匿名性が担保できないため、送信はキャンセルされました。\n";
+                canSend = false;
+            } else if (!contactEmail.includes('@')) {
+                // メールアドレスの形式が正しくない場合もエラー
+                errorMessage += "・メールアドレスが正しい形式ではありません。\n";
+                canSend = false;
+            }
+
+            // 3. ご相談内容のチェック：文字数が少なすぎたらエラー
+            if (inquiryDetail.length < 30) {
+                errorMessage += "・ご相談内容が短すぎます。当社のAIが真剣度を測れませんでした (最低30文字必要です)。\n";
+                canSend = false;
+            }
+            
+            // 最終判定
+            if (canSend) {
+                // 全ての条件を奇跡的にクリアした場合のメッセージ（これも送信はしない）
+                alert("✨ 奇跡が起きました！すべての条件をクリアしました！\n\nしかし、現在サーバーが休眠状態のため、データは破棄されました。もう一度、同じ条件で送信してください。");
+            } else {
+                // エラーメッセージを表示
+                alert(errorMessage + "\n条件に合致するまで、何度でもやり直してください。");
+            }
+
+            // 最終的にフォームの送信は行いません
+            return false;
+        }
+    </script>
+</body>
+</html>
